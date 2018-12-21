@@ -26,21 +26,21 @@
         <img class="cover" [src]="bike.image" alt="bike">
         <p>
           <label for="id">ID:</label>
-          <input disabled type="text" class="form-control" placeholder="ID" aria-label="id">
+          <input [(ngModel)]="bike.id" disabled type="text" class="form-control" placeholder="ID" aria-label="id">
         </p>  
         <p>
           <label for="description">Description:</label>
-          <input type="text" class="form-control" placeholder="Description" aria-label="desc"
+          <input [(ngModel)]="bike.description" type="text" class="form-control" placeholder="Description" aria-label="desc"
             aria-describedby="basic-addon1">
         </p>
         <p>
           <label for="price">Price</label>
-          <input type="text" class="form-control" placeholder="Price" aria-label="price"
+          <input [(ngModel)]="bike.price" type="text" class="form-control" placeholder="Price" aria-label="price"
             aria-describedby="basic-addon1">
         </p>
         <p>
           <label for="quantity">Quantity</label>
-          <input type="text" class="form-control" placeholder="Quantity" aria-label="qty"
+          <input [(ngModel)]="bike.quantity" type="text" class="form-control" placeholder="Quantity" aria-label="qty"
             aria-describedby="basic-addon1">
         </p>
       </mat-card-content>

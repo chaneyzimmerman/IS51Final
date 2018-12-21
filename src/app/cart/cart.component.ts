@@ -3,6 +3,7 @@ import { Http } from '@angular/http';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
 import { ToastService } from '../toast/toast.service';
+
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
@@ -18,6 +19,12 @@ export class CartComponent implements OnInit {
   ) { }
 
   async ngOnInit() {
+    this.loadInventoryFromJson = await this.loadInventoryFromJson();
+  }
+
+  async loadInventoryFromJson() {
+    const inventory = await this.http.get('assets/inventory.json').toPromise();
+    return inventory.json
   }
 
 }
